@@ -8,6 +8,8 @@ type NameToType = {
   readonly DATABASE_URL: string;
   readonly GITHUB_SECRET: string;
   readonly GITHUB_ID: string;
+  readonly GOOGLE_SECRET: string;
+  readonly GOOGLE_ID: string;
   readonly SECRET: string;
   readonly SENTRY_DSN: string;
   readonly NEXTAUTH_CALLBACK_URL: string;

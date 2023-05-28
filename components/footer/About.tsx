@@ -1,24 +1,31 @@
-import Link from 'next/link';
-import logoImg from '../../assets/logo.svg';
+import Link from "next/link";
+import logoImg from "../../assets/logo-no-background.svg";
 
-export default function FooterAbout({companyTitle}: {companyTitle?: string}) {
-	const title = companyTitle || 'Your Company LLC.';
+export default function FooterAbout({
+	companyTitle,
+}: {
+	companyTitle?: string;
+}) {
+	const title = companyTitle || "NexTrade";
 	return (
 		<>
-			<div className='page-footer__logo'>
-				<Link href='/'>
+			<div className="page-footer__logo">
+				<Link href="/">
 					<a>
-						<img src={logoImg.src} width={logoImg.width} height={logoImg.height} alt={title} />
+						<img src={logoImg.src} width={100} height={100} alt={title} />
 					</a>
 				</Link>
 			</div>
-			<div className='page-footer__company-info'>
-				<p className='title'>{title}</p>
+			<div className="page-footer__company-info">
+				<p className="title">{title}</p>
 			</div>
-			<div className='page-footer__disclaimer'>
-				<p className='text-muted small'>
-					This website and its contents are provided "as is" and "as available" without any warranty or representations of any kind, whether express or implied.
-					Price and availability information is subject to change without notice.
+			<div className="page-footer__disclaimer">
+				<p className="text-muted small">
+					NexTrade is an innovative e-commerce platform that offers a seamless
+					shopping experience, connecting customers with a wide range of
+					products from various sellers. With cutting-edge technology and
+					user-friendly features, NexTrade makes online shopping convenient and
+					efficient.
 				</p>
 			</div>
 		</>

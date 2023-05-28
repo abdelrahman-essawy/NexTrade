@@ -59,7 +59,7 @@ export default function MainLayout({children, title, metaData, mainMenu, footerM
 			<AlertWidget />
 			<div className={clsx('page-layout page-layout_main sample-theme', {'page-layout_aside-opened': asideIsOpened})}>
 				<CallToOrder />
-				<Header />
+				<Header companyTitle='NexTrade'/>
 				{mainMenu && <HorizontalMenu menuList={mainMenu} />}
 				<main className='page-layout__main'>
 					{children}

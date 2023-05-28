@@ -1,14 +1,14 @@
-import {MouseEvent} from 'react';
-import Link from 'next/link';
-import HeaderCart from './cart/HeaderCart';
-import ChooseVariantModal from './header/ChooseVariantModal';
-import logoImg from '../assets/logo.svg';
-import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {useAppDispatch} from '../hooks/redux';
-import {setIsOpened} from '../redux/reducers/asideMenu';
+import { MouseEvent } from "react";
+import Link from "next/link";
+import HeaderCart from "./cart/HeaderCart";
+import ChooseVariantModal from "./header/ChooseVariantModal";
+import logoImg from "../assets/logo.svg";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useAppDispatch } from "../hooks/redux";
+import { setIsOpened } from "../redux/reducers/asideMenu";
 
-export default function Header({companyTitle}: {companyTitle?: string}) {
+export default function Header({ companyTitle }: { companyTitle?: string }) {
 	const dispatch = useAppDispatch();
 
 	const onHamburgerBtnClicked = (e: MouseEvent<HTMLButtonElement>) => {
@@ -16,24 +16,25 @@ export default function Header({companyTitle}: {companyTitle?: string}) {
 		dispatch(setIsOpened(true));
 	};
 
-	const title = companyTitle || 'Your Company LLC.';
+	const title = companyTitle || "NexTrade";
 
 	return (
-		<header className='page-header'>
-			<div className='container'>
-				<div className='page-header__content'>
-					<div className='page-header__logo'>
-						<Link href='/'>
+		<header className="page-header">
+			<div className="container">
+				<div className="page-header__content">
+					<div className="page-header__logo">
+						<Link href="/">
 							<a>
-								<img src={logoImg.src} width={logoImg.width} height={logoImg.height} alt={title} />
+								<img src={logoImg.src} width={150} height={150} alt={title} />
 							</a>
 						</Link>
 					</div>
-					<div className={'page-header__right-blocks'}>
+					<div className={"page-header__right-blocks"}>
 						<HeaderCart />
-						<button type={'button'}
-										className={'btn btn-outline-secondary page-header__hamburger'}
-										onClick={onHamburgerBtnClicked}
+						<button
+							type={"button"}
+							className={"btn btn-outline-secondary page-header__hamburger"}
+							onClick={onHamburgerBtnClicked}
 						>
 							<FontAwesomeIcon icon={faBars} />
 						</button>

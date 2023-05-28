@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow:
-Host: your-domain.com
-Sitemap: https://your-domain.com/sitemap.xml

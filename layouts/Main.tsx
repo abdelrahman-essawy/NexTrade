@@ -79,7 +79,7 @@ export default function MainLayout({
 					content={imgUrl || shopBaseUrl + "/logo-black.png"}
 				/>
 				{description && (
-					<meta property="og:description" content={description} />
+					<meta property="og:description" content={description || "NexTrade is an innovative e-commerce platform that offers a seamless shopping experience, connecting customers with a wide range of products from various sellers. With cutting-edge technology and user-friendly features, NexTrade makes online shopping convenient and efficient."} />
 				)}
 
 				<title>{title || "NexTrade E-Commerce"}</title>

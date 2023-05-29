@@ -17,13 +17,12 @@ import {filterKeys, filterProductsQuery} from '../lib/category';
 const DEFAULT_DISPLAY_LIMIT = 3;
 
 /**
- * @param filterFields - might be passed manually, e.g. pass:
- * [{type: 'price'}] to have filters by price only. In other words you don't necessarily need to fetch filters from the server side.
- *
+ * @param filterFields
  * @param queryParams
  * @param onSubmit
  * @constructor
  */
+
 export default function FilterForm({filterFields, queryParams, categoryId, onSearch, idsPrefix}: IFilterFormProps) {
 	const [hasChanged, setHasChanged] = useState<boolean>(false);
 	const [values, setValues] = useState<TQuery>({});

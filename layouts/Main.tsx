@@ -79,7 +79,13 @@ export default function MainLayout({
 					content={imgUrl || shopBaseUrl + "/logo-black.png"}
 				/>
 				{description && (
-					<meta property="og:description" content={description || "NexTrade is an innovative e-commerce platform that offers a seamless shopping experience, connecting customers with a wide range of products from various sellers. With cutting-edge technology and user-friendly features, NexTrade makes online shopping convenient and efficient."} />
+					<meta
+						property="og:description"
+						content={
+							description ||
+							"NexTrade is an innovative e-commerce platform that offers a seamless shopping experience, connecting customers with a wide range of products from various sellers. With cutting-edge technology and user-friendly features, NexTrade makes online shopping convenient and efficient."
+						}
+					/>
 				)}
 
 				<title>{title || "NexTrade E-Commerce"}</title>
@@ -108,6 +114,11 @@ export default function MainLayout({
 				<AsideBackdrop />
 			</div>
 			<AsideMenu menuList={mainMenu} />
+			<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+			<script
+				src="https://mediafiles.botpress.cloud/f8ca3b6a-ced0-4add-ac88-58a8a63cfbd6/webchat/config.js"
+				defer
+			></script>
 		</>
 	);
 }
